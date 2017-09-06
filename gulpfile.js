@@ -15,6 +15,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const webpack = require('webpack');
+const gulpStylelint = require('gulp-stylelint');
 
 
 // configuration
@@ -31,6 +32,9 @@ const config = {
       src: 'src/assets/toolkit/styles/*.scss',
       dest: 'dist/assets/toolkit/styles',
       watch: 'src/assets/toolkit/styles/**/*.scss',
+    },
+    toolkitLint: {
+      src: ['src/assets/toolkit/styles/*.scss'],
     },
   },
   scripts: {
@@ -83,7 +87,7 @@ gulp.task('styles:fabricator', () => {
   .pipe(gulpif(config.dev, reload({ stream: true })));
 });
 
-gulp.task('styles:toolkit', () => {
+gulp.task('styles:toolkit', ['lint-styles'], () => {
   gulp.src(config.styles.toolkit.src)
   .pipe(gulpif(config.dev, sourcemaps.init()))
   .pipe(sass({
@@ -97,6 +101,20 @@ gulp.task('styles:toolkit', () => {
 });
 
 gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
+
+// Stylelint
+gulp.task('lint-styles', () => {
+  return gulp
+      .src(config.styles.toolkitLint.src)
+      .pipe(gulpStylelint({
+          reporters: [
+              {
+                  formatter: 'string',
+                  console: true
+              }
+          ]
+      }));
+});
 
 
 // scripts

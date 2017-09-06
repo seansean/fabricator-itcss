@@ -21,10 +21,8 @@
 
         "declaration-colon-space-after": "always",
         "declaration-block-no-duplicate-properties": true,
-        "order/order": [
-            "display",
-            "position",
-            "top", "right", "bottom", "left",
+        "order/properties-order": [
+            "display", "position","top", "right", "bottom", "left",
 
             "flex", "flex-basis", "flex-direction", "flex-flow", "flex-grow", "flex-shrink", "flex-wrap", "align-content", "align-items", "align-self", "justify-content", "order",
 
@@ -94,7 +92,7 @@
         "selector-no-vendor-prefix": true,
 
         "comment-empty-line-before": [ "always", {
-            "ignore": ["stylelint-commands", "between-comments"],
+            "ignore": ["after-comment", "stylelint-commands"]
         }],
 
         "max-empty-lines": 2,
