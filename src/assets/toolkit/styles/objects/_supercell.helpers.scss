@@ -1,0 +1,26 @@
+/**
+ * Helpers for Supercell layout
+ */
+
+.o-layout--bordered {
+    > .o-layout__item {
+        & + .o-layout__item {
+            position: relative;
+
+            &:before {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: $color-white;
+                content: '';
+
+                @include mq(width-lg) {
+                    left: $supercell-spacing-unit / 2;
+                    width: 1px;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

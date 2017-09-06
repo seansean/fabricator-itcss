@@ -1,0 +1,7 @@
+<nav class="c-nav-main">
+    <ul class="c-nav-main__list">
+    {{#each nav.main}}
+        <li class="c-nav-main__item"><a href="{{this}}" class="c-nav-main__btn c-btn-plain{{#ifEval ../section '==' @key}} is-active{{/ifEval}}">{{@key}}</a></li>
+    {{/each}}
+    </ul>
+</nav>

@@ -1,0 +1,31 @@
+/**
+ * Nav Pagination
+ */
+
+.nav-pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: em($vert-spacing-unit) * 1.25;
+    padding-top: em($vert-spacing-unit) / 2;
+    border-top: 1px solid $color-border;
+    font-size: rem($sm-font-size);
+
+    &__item {
+        &--next {
+            @include mq(width-md) {
+                margin-left: auto;
+            }
+        }
+    }
+
+    a {
+        &, &:visited {
+            text-decoration: none;
+            @include font('medium');
+        }
+
+        &:active, &:hover {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,99 @@
+/**
+ * Utility Classes
+ */
+
+/* Text */
+.u-font-size-base {
+    font-size: 1em;
+}
+
+.u-font-size-sm {
+    font-size: $sm-font-size;
+}
+
+.u-font-size-xsm {
+    font-size: $xsm-font-size;
+}
+
+.u-font-plain {
+    @include font();
+}
+
+.u-text-align-center {
+    text-align: center;
+}
+
+.u-text-align-right {
+    text-align: right;
+}
+
+.u-uppercase {
+    text-transform: uppercase !important;
+}
+
+
+/* Borders */
+
+.u-border-none {
+    border: 0;
+}
+
+
+/* Layout */
+.u-margin-bottom {
+    margin-bottom: em($base-spacing-unit);
+}
+
+.u-margin-pull-up {
+    margin-top: em(-$base-spacing-unit);    
+}
+
+.u-margin-bottom-none {
+    margin-bottom: 0;
+}
+
+.u-padding-bottom-none {
+    padding-bottom: 0;
+}
+
+
+/* Visibility */
+
+// Visually hidden
+.u-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    border: 0;
+    overflow: hidden;
+}
+
+// Hidden
+.u-hidden {
+    display: none;
+}
+
+// Hide on large screens
+.u-hidden\@lg {
+    @include mq(width-lg) {
+        display: none !important;
+    }
+}
+
+.u-hidden\@sm-lg {
+    @include mq(0px, width-lg) {
+        display: none;
+    }
+}
+
+// Show only on large screens;
+.u-visible-lg {
+    display: none !important;
+
+    @include mq(width-lg) {
+        display: block !important;
+    }
+}

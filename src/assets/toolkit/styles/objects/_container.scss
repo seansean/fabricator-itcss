@@ -1,0 +1,14 @@
+/**
+ * Container
+ */
+
+.o-container {
+    width: 100%;
+    max-width: em($content-max-width);
+    margin: 0 auto;
+    padding: 0 em($gutter-width-m);
+
+    @include mq(width-lg) {
+        padding: 0 em($gutter-width);    
+    }
+}

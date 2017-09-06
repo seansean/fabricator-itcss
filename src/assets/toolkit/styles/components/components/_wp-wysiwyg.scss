@@ -1,0 +1,64 @@
+/**
+ * WYSIWYG Fields
+ */
+
+.c-wysiwyg {
+    h1 {
+        @extend .c-h-lg;
+    }
+
+    h2 { 
+        @extend .c-h-md;
+    }
+
+    h3 {
+        @extend .c-h-sm;
+    }
+
+    h4 {
+        @extend .c-h-sm;
+    }
+
+    h5 {
+        @extend .c-h-sm;
+    }
+
+    ul:not([class]), ol:not([class]) {
+        @extend .c-list-basic;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    hr {
+        @extend .c-hrule;
+    }
+
+    blockquote {
+
+    }
+
+    .alignright {
+        display: block;
+        padding-bottom: 1rem;
+
+        @include mq(width-sm) {
+            display: inline;
+            padding: 0 0 1rem 1rem;
+            float: right;
+        }
+    }
+
+    .alignleft {
+        display: block;
+        padding-bottom: 1rem;
+
+        @include mq(width-sm) {
+            display: inline;
+            padding: 0 1rem 1rem 0;
+            float: left;
+        }
+    }
+}

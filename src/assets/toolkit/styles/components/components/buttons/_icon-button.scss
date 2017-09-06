@@ -1,0 +1,9 @@
+/**
+ * Icon Button
+ */
+
+.c-btn-icon {
+    @include reset-button();
+    color: currentColor;
+    @include focus-button();
+}

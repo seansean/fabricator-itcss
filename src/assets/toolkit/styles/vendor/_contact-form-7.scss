@@ -1,0 +1,63 @@
+/**
+ * Contact Form 7 Form overrides
+ */
+.wpcf7 .screen-reader-response {
+    @extend .u-visually-hidden;
+}
+
+// Wrapper for checkboxes and radio buttons
+.wpcf7-list-item {
+    display: block;
+    margin-left: 0;
+
+    & + & {
+        margin-top: 0.5rem;
+    }
+}
+
+// Checkbox label
+input[type='checkbox'] + .wpcf7-list-item-label {
+    display: inline-block;
+    margin-bottom: 0.5em;
+    margin-left: 0.25em;
+}
+
+.wpcf7 input[type='checkbox'] {
+    font-size: 1rem;
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+// Error on field
+.wpcf7-not-valid {
+    border: 1px solid $color-error;
+}
+
+// Error label
+.wpcf7-not-valid-tip {
+    margin-top: 0.25rem;
+    color: $color-error;
+    font-size: rem($xsm-font-size);
+}
+
+// Error success boxes
+div.wpcf7-mail-sent-ok,
+div.wpcf7-validation-errors {
+    margin: 0 auto;
+    padding: 1rem;
+    border: 0;
+}
+
+div.wpcf7-validation-errors {
+    background: $color-error-bg;
+    color: $color-error;
+}
+
+.wpcf7 [role='alert'] {
+    color: $color-error;
+}
+
+div.wpcf7-mail-sent-ok {
+    background: $color-success-bg;
+    color: $color-success;
+}

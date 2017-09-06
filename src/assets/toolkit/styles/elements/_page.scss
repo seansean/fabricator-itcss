@@ -1,0 +1,30 @@
+/**
+ * Base Styles
+ */
+
+@viewport {
+    width: device-width;
+}
+
+::selection {
+    background-color: lightblue;
+    text-shadow: 1px 1px #d3d3d3;
+}
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    @include font();
+}
+
+body {
+    position: relative;
+    color: $color-base;
+    font-size: 100%;
+    @include font();
+    @include crisp-text();
+
+    @include mq(width-lg) {
+        padding-top: 0;
+    }
+}

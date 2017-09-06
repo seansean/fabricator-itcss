@@ -1,0 +1,36 @@
+// Typography Settings
+$xl-font-size:      20px;
+$lg-font-size:      18px;
+$base-font-size:    16px;
+$sm-font-size:      14px;
+$xsm-font-size:     12px;
+
+$btn-font-size:     $base-font-size;
+
+$base-line-height:  1;
+
+$text-block-line-height: 1.4;
+
+// Spacing / gutters
+$base-spacing-unit: 34px;
+$half-spacing-unit: $base-spacing-unit / 2;
+
+$global-spacing-unit: 30px !default;
+$global-spacing-unit-tiny: round(0.25 * $global-spacing-unit);
+$global-spacing-unit-small: round(0.5 * $global-spacing-unit);
+$global-spacing-unit-large: round(2 * $global-spacing-unit);
+
+$vert-spacing-unit: 50px;
+$vert-spacing-unit-m: $vert-spacing-unit / 2;
+
+$gutter-width: 60px;
+$gutter-width-m: 20px;
+
+$head-height-m: 50px;
+
+// Page dimensions
+$content-max-width: 1200px;
+$head-max-width: 1370px;
+
+// Supercell
+$supercell-spacing-unit: $gutter-width;

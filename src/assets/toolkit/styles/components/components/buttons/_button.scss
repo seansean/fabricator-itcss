@@ -1,0 +1,37 @@
+/**
+ * Buttons
+ */
+
+.c-btn {
+    @include reset-button();
+    display: inline-block;
+    padding: 0.75em 1.625em 0.688em;
+    border: 2px solid currentColor;
+    color: $color-btn;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    @include font('medium');
+    @include focus-button();
+    @include transition-button-hover();
+
+    @include mq(width-md) {
+        font-size: $btn-font-size;
+    }
+
+    &:active, &:hover {
+        border-color: currentColor;
+        color: lighten($color-btn, 15%);
+    }
+
+    &--narrow {
+        padding-right: 1em;
+        padding-left: 1em;
+    }
+
+    // Icons
+    &__icon {
+        margin-left: 0.25em;
+    }
+}

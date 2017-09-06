@@ -1,0 +1,48 @@
+/**
+ * Fonts
+ */
+
+@font-face {
+    font-family: 'Cora Regular';
+    font-display: swap;
+    src: url('../fonts/343AAE_0_0.eot');
+    src: url('../fonts/343AAE_0_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/343AAE_0_0.woff') format('woff'),
+         url('../fonts/343AAE_0_0.ttf') format('truetype');
+}
+        
+@font-face {
+    font-family: 'Cora Medium';
+    font-display: swap;
+    src: url('../fonts/343AAE_1_0.eot');
+    src: url('../fonts/343AAE_1_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/343AAE_1_0.woff') format('woff'),
+         url('../fonts/343AAE_1_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Cora Bold';
+    font-display: swap;
+    src: url('../fonts/343AAE_2_0.eot');
+    src: url('../fonts/343AAE_2_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/343AAE_2_0.woff') format('woff'),
+         url('../fonts/343AAE_2_0.ttf') format('truetype');
+}
+
+// Default - Cora
+$fallback-sans: Helvetica, Arial, sans-serif;
+
+@mixin font($weight: 'normal') {
+    font-weight: normal;
+
+    @if $weight == 'normal' {
+        font-family: 'Cora Regular', $fallback-sans;
+    } @else if $weight == 'medium' {
+        font-family: 'Cora Medium', $fallback-sans;
+    } @else if $weight == 'bold' {
+        font-family: 'Cora Bold', $fallback-sans;
+    } @else {
+        @warn 'Weight not available for this font.';
+        @error 'Weight not available for this font.';
+    }
+}

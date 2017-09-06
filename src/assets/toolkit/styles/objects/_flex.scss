@@ -1,0 +1,41 @@
+/**
+ * Flex
+ */
+
+.o-flex {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+    @include mq(width-lg) {
+        flex-direction: row;        
+    }
+}
+
+.o-flex__item {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+    justify-content: top;
+    position: relative;
+
+    @include mq(width-lg) {
+        flex-basis: 0;
+    }
+}
+
+// Bordered variant
+.o-flex--bordered {
+    .o-flex__item {
+        & + .o-flex__item {
+            border-top: 1px solid $color-white;
+
+            @include mq(width-lg) {
+                border-top: none;
+                border-left: 1px solid $color-white;
+            }
+        }
+    }
+}

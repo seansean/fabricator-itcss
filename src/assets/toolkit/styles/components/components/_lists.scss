@@ -1,0 +1,66 @@
+/**
+ * Lists
+ */
+
+// Basic list with bullets
+.c-list-basic {
+    margin-bottom: 1em;
+
+    > li {
+        margin-bottom: 0.5em;
+        margin-left: 1.25em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// No bullets
+.c-list-plain {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li + li {
+        margin-top: $gutter-width / 2;
+    }
+
+    // ADds border between
+    &--bordered {
+        > li + li {
+            padding-top: $gutter-width / 2;
+            border-top: 1px solid $color-border;
+        }
+    }
+
+    // No indentation
+    &--no-indent {
+        padding-left: 0;
+        
+        li {
+            margin-left: 0;
+        }
+    }
+
+    // No vertical margin
+    &--short {
+        > li + li {
+            margin-top: 0;
+        }
+    }
+}
+
+// List without bullets and inline
+.c-list-inline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+
+    > li {
+        display: inline-block;
+        margin-right: $half-spacing-unit;
+        margin-bottom: $half-spacing-unit;
+    }
+}

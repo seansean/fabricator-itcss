@@ -1,0 +1,49 @@
+/**
+ * Headings
+ */
+
+// Remove all text-decoration for directly descendended anchors
+[class^='c-h-'], [class*=' c-h-'] {
+    > a {
+        &, &:hover, &:focus, &:visited {
+            color: currentColor;
+            text-decoration: none;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
+.c-h-xl {
+    margin-bottom: 0.75em;
+    font-size: em(30px);
+    @include font('bold');
+
+    @include mq(width-lg) {
+        font-size: em(50px);
+    }
+}
+
+// Large
+.c-h-lg {
+    margin-bottom: em($base-spacing-unit / 3);
+    font-size: em(31px);
+    @include font('bold');
+}
+
+// Medium
+.c-h-md {
+    margin-bottom: em($base-spacing-unit / 3);
+    font-size: em(21px);
+    @include font('medium');
+}
+
+// Small
+.c-h-sm {
+    margin-bottom: 0.5em;
+    font-size: em(17px);
+    @include font('medium');
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{{title}}</title>
+
+	<link rel="stylesheet" href="{{baseurl}}/assets/toolkit/styles/toolkit.css">
+
+</head>
+<body data-sprites="/assets/toolkit/images/sprites.svg">
+	{{> head }}
+
+	{% body %}
+
+	{{> foot }}
+
+	<!-- jQuery - For Fabricator only. Production will use Wordpress jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- / jQuery -->
+	<script src="{{baseurl}}/assets/toolkit/scripts/toolkit.js"></script>
+
+</body>
+</html>
