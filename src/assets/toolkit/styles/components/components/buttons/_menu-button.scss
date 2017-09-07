@@ -4,8 +4,8 @@
 
 .c-btn-menu {
     @include reset-button();
-    color: $color-btn;
     padding: 0.5rem 0.25rem;
+    color: $color-btn;
     @include focus-button();
 
     &__icon {

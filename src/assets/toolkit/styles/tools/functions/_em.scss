@@ -16,7 +16,9 @@
  */
 
 @function em($target, $context: $base-font-size, $unitless: false) {
-    @if $target == 0 { @return 0; }
+    @if $target == 0 {
+        @return 0;
+    }
 
     @if(unitless($target)) {
         $target: $target + 0px;
@@ -36,7 +38,9 @@
 }
 
 @function rem($target, $context: $base-font-size, $unitless: false) {
-    @if $target == 0 { @return 0; }
+    @if $target == 0 {
+        @return 0;
+    }
 
     @if(unitless($target)) {
         $target: $target + 0px;

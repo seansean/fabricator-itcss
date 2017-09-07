@@ -7,7 +7,7 @@ a:not([class]) {
     cursor: pointer;
 
     &, &:visited, &:active, &:hover {
-        color: currentColor;        
+        color: currentColor;
     }
 }
 

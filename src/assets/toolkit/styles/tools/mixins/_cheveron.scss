@@ -30,8 +30,8 @@
     height: $size;
     margin: $margin;
     transform: rotate($rotation);
-    border-style: solid;
     border-width: $stroke $stroke 0 0;
+    border-style: solid;
     color: $color;
     content: '';
     vertical-align: middle;

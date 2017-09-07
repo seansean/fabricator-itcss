@@ -34,7 +34,7 @@ const config = {
       watch: 'src/assets/toolkit/styles/**/*.scss',
     },
     toolkitLint: {
-      src: ['src/assets/toolkit/styles/*.scss'],
+      src: ['src/assets/toolkit/styles/**/*.scss', '!src/assets/toolkit/styles/generic/_normalize.scss'],
     },
   },
   scripts: {
